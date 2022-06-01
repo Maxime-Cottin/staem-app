@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+
+body {
+	@apply font-noto bg-[#1B2837];
+}
+
+/* Swiper settings */
+.swiper {
+	@apply px-6 !important;
+}
+.swiper-pagination-bullet {
+	@apply bg-white opacity-50 !important;
+}
+.swiper-pagination-bullet-active {
+	@apply bg-white opacity-100 !important;
+}
