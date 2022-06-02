@@ -27,14 +27,15 @@ const Header = () => {
 				className="absolute w-[900px] max-w-none h-56 -translate-x-[225px]"
 			/>
 			<Swiper
-				slidesPerView={isDesktop ? 3 : 1}
-				spaceBetween={24}
+				slidesPerView={isDesktop ? 2 : 1}
+				spaceBetween={isDesktop ? 44 : 24}
 				pagination={true}
 				loop={true}
 				autoplay={{
 					delay: 2500,
 					disableOnInteraction: false,
 				}}
+				centeredSlides={true}
 				modules={[Autoplay, Pagination]}
 			>
 				{gamesList.map((game, key) => (
@@ -42,7 +43,7 @@ const Header = () => {
 						<img
 							src={game.thumbnail}
 							alt={game.name + " thumbnail"}
-							className="w-full h-40 object-cover rounded-3xl mx-auto mb-10 md:w-[512px] md:h-auto"
+							className="w-full h-40 object-cover rounded-3xl mb-10 md:h-96 md:aspect-video md:w-auto"
 						/>
 					</SwiperSlide>
 				))}

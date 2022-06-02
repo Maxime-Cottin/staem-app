@@ -1,6 +1,6 @@
 const NewTrending = () => {
 	return (
-		<section className="w-screen px-6 overflow-x-hidden wrapper">
+		<section className="w-screen px-6 overflow-x-hidden wrapper md:overflow-x-visible">
 			<h2 className="text-white font-bold text-2xl inline-block relative mb-7 md:mb-9">
 				New & Trending
 			</h2>
