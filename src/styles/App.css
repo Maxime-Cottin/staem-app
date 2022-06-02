@@ -5,16 +5,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
 
 body {
-	@apply font-noto bg-[#1B2837];
+  @apply font-noto bg-[#1B2837];
 }
 
 /* Swiper settings */
 .swiper {
-	@apply px-6 !important;
+  @apply px-6 !important;
 }
 .swiper-pagination-bullet {
-	@apply bg-white opacity-50 !important;
+  @apply bg-white opacity-50 !important;
 }
 .swiper-pagination-bullet-active {
-	@apply bg-white opacity-100 !important;
+  @apply bg-white opacity-100 !important;
+}
+
+h2 {
+  @apply before:absolute before:content-[''] before:w-screen before:h-3 before:bg-[#214B6B] before:top-1/2 before:-translate-y-1/2 before:right-full before:-translate-x-3 before:rounded-full after:absolute after:content-[''] after:w-screen after:h-3 after:bg-[#214B6B] after:top-1/2 after:-translate-y-1/2 after:left-full after:translate-x-5 after:rounded-full;
 }
