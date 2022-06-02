@@ -1,6 +1,6 @@
 const Menu = () => {
 	return (
-		<header className="flex justify-between items-center px-7 py-12 font-bold text-white">
+		<header className="flex justify-between items-center px-7 py-12 font-bold text-white md:px-14 md:py-12 wrapper">
 			<h1 className="text-[40px]">STAEM</h1>
 			<a
 				href="https://github.com/Maxime-Cottin"

@@ -5,16 +5,29 @@ import "swiper/css";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css/pagination";
 
+import { useEffect, useState } from "react";
+
 const Header = () => {
+	const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+
+	const updateMedia = () => {
+		setDesktop(window.innerWidth > 768);
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", updateMedia);
+		return () => window.removeEventListener("resize", updateMedia);
+	});
+
 	return (
-		<section className="pt-5 pb-8 relative overflow-x-hidden">
+		<section className="pt-5 pb-8 relative overflow-x-hidden wrapper">
 			<img
 				src={require("../assets/images/ellipse.png")}
 				alt="background blur"
 				className="absolute w-[900px] max-w-none h-56 -translate-x-[225px]"
 			/>
 			<Swiper
-				slidesPerView={1}
+				slidesPerView={isDesktop ? 3 : 1}
 				spaceBetween={24}
 				pagination={true}
 				loop={true}
@@ -29,7 +42,7 @@ const Header = () => {
 						<img
 							src={game.thumbnail}
 							alt={game.name + " thumbnail"}
-							className="w-full h-40 object-cover rounded-3xl mx-auto mb-10"
+							className="w-full h-40 object-cover rounded-3xl mx-auto mb-10 md:w-[512px] md:h-auto"
 						/>
 					</SwiperSlide>
 				))}
