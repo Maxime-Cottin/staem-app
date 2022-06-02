@@ -43,7 +43,7 @@ const Header = () => {
 						<img
 							src={game.thumbnail}
 							alt={game.name + " thumbnail"}
-							className="w-full h-40 object-cover rounded-3xl mb-10 md:h-96 md:aspect-video md:w-auto"
+							className="w-full h-40 object-cover rounded-3xl mb-10 sm:h-64 md:h-96 md:aspect-video md:w-auto"
 						/>
 					</SwiperSlide>
 				))}
