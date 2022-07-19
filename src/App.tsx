@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import NewTrending from "./components/NewTrending";
+// import NewTrending from "./components/NewTrending";
 import { gamesList } from "./datas/games";
-import gamesJSON from "./datas/gamesList.json";
+// import gamesJSON from "./datas/gamesList.json";
 import "./styles/App.css";
 
 function App() {
