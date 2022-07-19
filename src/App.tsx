@@ -3,11 +3,10 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 // import NewTrending from "./components/NewTrending";
 import { gamesList } from "./datas/games";
-// import gamesJSON from "./datas/gamesList.json";
 import "./styles/App.css";
 
 function App() {
-	const [datas, setDatas] = useState([]);
+	const [, setDatas] = useState([]);
 	const [searchTerm, setSearchTerm] = useState([]);
 
 	useEffect(() => {
